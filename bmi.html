@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contain">
+        <h1>BMI Calculator</h1>
+        <p>Height (in cm)</p>
+    
+        <input type="text" placeholder="Enter height" id="height" />
+    
+        <p>Weight (in kg)</p>
+    
+        <input type="text" placeholder="Enter weight" id="weight" />
+    
+        <button id="butt">Calculate</button>
+    
+        <div id="result"></div>
+    </div>
+    
+</body>
+</html>
+<script>
+    window.onload = () => {
+            let btn = document.querySelector("#butt");
+
+            btn.addEventListener("click", calculate);
+        };
+
+        function calculate() {
+            let hei = parseInt(document
+                .querySelector("#height").value);
+
+            let wei = parseInt(document
+                .querySelector("#weight").value);
+
+            let res = document.querySelector("#result");
+
+            if (hei === "" || isNaN(hei))
+                res.innerHTML = "Enter a Height !";
+
+            else if (wei === "" || isNaN(wei))
+                res.innerHTML = "Enter a Weight !";
+
+            else {
+                let bmi = (wei / ((hei * hei)
+                    / 10000)).toFixed(2);
+                if (bmi < 18.6) 
+                    res.innerHTML =`Under Weight : <span>${bmi}</span>`;
+
+                else if (bmi >= 18.6 && bmi < 24.9)
+                    res.innerHTML =`Normal Weight : <span>${bmi}</span>`;
+
+                else res.innerHTML =`Over Weight : <span>${bmi}</span>`;
+            }
+        }
+</script>

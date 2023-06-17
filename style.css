@@ -1,0 +1,21 @@
+body{
+    border: solid black 2px;
+    padding: 10px 100px 100px;
+    margin: 20%;
+    align-items: center;
+    padding-left:250px;
+    padding-top: 30px;
+}
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(128, 167, 202);
+    text-shadow: 5px;
+
+}
+p,#butt{
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#result{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
